@@ -15,7 +15,7 @@ describe('Login&Psswd', function () {
 })
 
 
-describe('Login%Psswd', function () {
+describe('Login&Psswd', function () {
     it('entered wrong data', function () {
 
         actions.openTestSixPage();
