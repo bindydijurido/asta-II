@@ -32,12 +32,12 @@ describe('Randomize Quantity Drag and Drop functionality', function () {
 describe('Drag and Drop product', function () {
     it('whit quantity == 0', function () {
 
-        var quantity = actions.getRandomValue(13);
+        var whichOne = actions.getRandomValue(13);
 
         actions.openTestPage("7");
-        actions.quantityForm(quantity, "0");
-        actions.dragAndDropElement(methods.getImgCircle(quantity), methods.dropBasket());
+        actions.quantityForm(whichOne, "0");
+        actions.dragAndDropElement(methods.getImgCircle(whichOne), methods.dropBasket());
 
-        expect(methods.productQuantityInBasket(quantity).getText().toBe("0"));
+        expect(methods.productQuantityInBasket(whichOne).getText().toBe("0"));
     })
 })
