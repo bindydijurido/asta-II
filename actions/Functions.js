@@ -36,15 +36,15 @@ module.exports = {
         }
     },
 
-    dragAndDropElement: function(elem, target) {
-        return browser.actions().dragAndDrop(elem,target).mouseUp().perform();
+    dragAndDropElement: function (elem, target) {
+        return browser.actions().dragAndDrop(elem, target).mouseUp().perform();
     },
 
-    quantityForm: function(number, productQuantity) {
+    quantityForm: function (number, productQuantity) {
         return element(by.className('form-control')[number]).sendKeys(productQuantity);
     },
 
-    getRandomValue: function(maximumValueMinusOne) {
+    getRandomValue: function (maximumValueMinusOne) {
         return Math.floor(Math.random() * maximumValueMinusOne);
     }
 }

@@ -1,26 +1,26 @@
 module.exports = {
 
-    logOutBttn: function() {
+    logOutBttn: function () {
         return browser.findElement(By.xpath('//*[@id="logout"]'));
     },
 
-    loginBttn: function() {
+    loginBttn: function () {
         return element(by.id('LoginForm_save'));
     },
 
-    wrongLoginDataAlert: function() {
+    wrongLoginDataAlert: function () {
         return browser.findElement(By.xpath('/html/body/div/div/div[2]/div[1]/div/ul/li'));
     },
 
-    getImgCircle: function(number) {
+    getImgCircle: function (number) {
         return element(by.className('img-circle')[number]);
     },
 
-    dropBasket: function() {
+    dropBasket: function () {
         return element(by.className('col-md-12 place-to-drop ui-droppable'));
     },
 
-    productQuantityInBasket: function(number) {
+    productQuantityInBasket: function (number) {
         return element(by.className('row-in-basket-quantity')[number]);
     }
 }

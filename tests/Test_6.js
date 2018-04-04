@@ -18,7 +18,7 @@ describe('Login&Psswd', function () {
 describe('Login&Psswd', function () {
     it('entered wrong data', function () {
 
-        actions.openTestSixPage();
+        actions.openTestPage("6");
         actions.provideDataToLoginForm("tester");
         actions.provideDataToPsswdForm("123");
         actions.clickLoginBttn();
@@ -30,7 +30,7 @@ describe('Login&Psswd', function () {
 describe('Download file', function () {
     it('to default directory', function () {
 
-        actions.openTestSixPage();
+        actions.openTestPage("6");
         actions.provideDataToLoginForm("tester");
         actions.provideDataToPsswdForm("123-xyz");
         actions.clickLoginBttn();
@@ -41,7 +41,7 @@ describe('Download file', function () {
 describe('Logout user functionality', function () {
     it('is working fine!', function () {
 
-        actions.openTestSixPage();
+        actions.openTestPage("6");
         actions.provideDataToLoginForm("tester");
         actions.provideDataToPsswdForm("123-xyz");
         actions.clickLoginBttn();
