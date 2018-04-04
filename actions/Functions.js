@@ -2,9 +2,9 @@ const methods = require('pageObjects/Methods');
 
 module.exports = {
 
-    openTestSixPage: function () {
+    openTestPage: function (route) {
         return browser.waitForAngularEnabled(false);
-        browser.get('https://testingcup.pgs-soft.com/task_6');
+        browser.get('https://testingcup.pgs-soft.com/task_' + route);
     },
 
     clickLoginBttn: function () {
@@ -34,5 +34,13 @@ module.exports = {
         } else {
             expect(methods.logOutBttn()).getText().toBe('Wyloguj');
         }
-    }
+    },
+
+    dragAndDropElement: function(elem, target) {
+        return browser.actions().dragAndDrop(elem,target).mouseUp().perform();
+    },
+
+    quantityForm: function(number, productQuantity) {
+        return element(by.className('form-control')[number]).sendKeys(productQuantity);
+    },
 }

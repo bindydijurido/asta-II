@@ -4,7 +4,7 @@ const methods = require('pageObjects/Methods');
 describe('Login&Psswd', function () {
     it('entered correctly', function () {
 
-        actions.openTestSixPage();
+        actions.openTestPage("6");
         actions.provideDataToLoginForm("tester");
         actions.provideDataToPsswdForm("123-xyz");
         actions.clickLoginBttn();

@@ -16,11 +16,8 @@ exports.config = {
         }
     },
 
-    specs: ['tests/weatherServiceTest.js'],
-    specs: ['tests/reportTopicTest.js'],
-    specs: ['tests/loginFormTest.js'],
-    specs: ['tests/registerUserTest.js'],
-    specs: ['searchBarTest.js'],
+    specs: ['tests/Test_6.js'],
+    specs: ['tests/Test_7.js'],
 
     jasmineNodeOpts: {
         showColors: true
