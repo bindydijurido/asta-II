@@ -43,4 +43,8 @@ module.exports = {
     quantityForm: function(number, productQuantity) {
         return element(by.className('form-control')[number]).sendKeys(productQuantity);
     },
+
+    getRandomValue: function(maximumValueMinusOne) {
+        return Math.floor(Math.random() * maximumValueMinusOne);
+    }
 }
