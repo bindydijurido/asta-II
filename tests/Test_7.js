@@ -14,7 +14,7 @@ describe('Drag&Drop functionality', function () {
     })
 })
 
-describe('Random Quantity for Drag&Drop functionality', function () {
+describe('Random Product Quantity for Drag&Drop functionality', function () {
     it('is working fine', function () {
 
         actions.openTestPage("7");
@@ -30,8 +30,8 @@ describe('Random Quantity for Drag&Drop functionality', function () {
     })
 })
 
-describe('Drag&Drop product', function () {
-    it('with quantity == 0', function () {
+describe('Drag&Drop product without Product Quantity', function () {
+    it('has always 0 value', function () {
 
         var randomValue = actions.getRandomValue(13);
 
