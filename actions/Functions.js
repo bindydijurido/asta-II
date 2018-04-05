@@ -46,5 +46,52 @@ module.exports = {
 
     getRandomValue: function (maximumValueMinusOne) {
         return Math.floor(Math.random() * maximumValueMinusOne);
+    },
+
+    var: selectDropdownByName = function (optionName) {
+        if (optionName) {
+            var options = element.findElements(by.tagName('task8_form[cardType]'))
+                .then(function (optionName) {
+                    options[optionName].click();
+                });
+        }
+    },
+
+    nameSurnameForm: function (nameSurname) {
+        return element(by.id('task8_form_name')).sendKeys(nameSurname);
+    },
+
+    cardNumber: function (cardNumber) {
+        return element(by.id('task8_form_cardNumber')).sendKeys(cardNumber);
+    },
+
+    cvvNumber: function (cvvNumber) {
+        return element(by.id('task8_form_cardCvv')).sendKeys(cvvNumber);
+    },
+
+    var: selectDropdownByMonth = function (optionName) {
+        if (optionName) {
+            var options = element.findElements(by.tagName('task8_form[cardInfo][month]'))
+                .then(function (optionName) {
+                    options[optionName].click();
+                });
+        }
+    },
+
+    var: selectDropdownByYear = function (optionName) {
+        if (optionName) {
+            var options = element.findElements(by.tagName('task8_form[cardInfo][month]'))
+                .then(function (optionName) {
+                    options[optionName].click();
+                });
+        }
+    },
+
+    payButton: function () {
+        return element(by.className('task8_form[save]'));
+    },
+
+    paymentClarificationAlert: function () {
+        return browser.findElement(By.xpath('/html/body/div/div/div[2]/div/div/ul/li'));
     }
 }
