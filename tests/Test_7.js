@@ -31,11 +31,14 @@ describe('Random Product Quantity for Drag&Drop functionality', function () {
 })
 
 describe('Drag&Drop product without Product Quantity', function () {
-    it('has always 0 value', function () {
+    it('basket has always 0 value', function () {
 
-        var randomValue = actions.getRandomValue(13);
+        for (var i = 0; i = 12; i++) {
 
-        script.dragAndDropFunctionality("7", randomValue, "0", randomValue);
-        expect(methods.productQuantityInBasket(randomValue).getText().toBe("0"));
+            var randomValue = actions.getRandomValue(13);
+
+            script.dragAndDropFunctionality("7", randomValue, "0", randomValue);
+            expect(methods.productQuantityInBasket(randomValue).getText().toBe("0"));
+        }
     })
 })
