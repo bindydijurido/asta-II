@@ -7,10 +7,10 @@ describe('Drag&Drop functionality', function () {
     it('is working fine', function () {
 
         var productQuantity = "4";
-        var number = 0;
+        var value = 0;
 
-        script.dragAndDropFunctionality("7", number, productQuantity, 0); // testPageNr, number, productQuantity, elementToDrag
-        expect(methods.productQuantityInBasket(number)).getText().toBe(productQuantity);
+        script.dragAndDropFunctionality("7", value, productQuantity, 0); // testPageNr, value, productQuantity, elementToDrag
+        expect(methods.productQuantityInBasket(value)).getText().toBe(productQuantity);
     })
 })
 
