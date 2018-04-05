@@ -28,7 +28,7 @@ module.exports = {
         return element(by.className('img-circle')[number]);
     },
 
-    dropBasket: function () {
+    dropToBasket: function () {
         return element(by.className('col-md-12 place-to-drop ui-droppable'));
     },
 

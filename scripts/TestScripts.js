@@ -14,7 +14,7 @@ module.exports = {
 
         actions.openTestPage(testPageNr);
         actions.quantityForm(number, productQuantity);
-        actions.dragAndDropElement(methods.getImgCircle(elementToDrag), methods.dropBasket());
+        actions.dragAndDropElement(methods.getImgCircle(elementToDrag), methods.dropToBasket());
     },
 
     fulfillPaymentForms: function (testPageNr, cardTypeName, clientSurname, cardNumber, cvvNumber, cardMonth, cardYear) {

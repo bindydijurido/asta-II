@@ -3,7 +3,7 @@ const methods = require('pageObjects/Methods');
 const script = require('scripts/TestScripts');
 
 
-describe('Drag and Drop functionality', function () {
+describe('Drag&Drop functionality', function () {
     it('is working fine', function () {
 
         var productQuantity = "4";
@@ -14,7 +14,7 @@ describe('Drag and Drop functionality', function () {
     })
 })
 
-describe('Randomize Quantity Drag and Drop functionality', function () {
+describe('Random Quantity for Drag&Drop functionality', function () {
     it('is working fine', function () {
 
         actions.openTestPage("7");
@@ -24,14 +24,14 @@ describe('Randomize Quantity Drag and Drop functionality', function () {
             var quantity = actions.getRandomValue(13).toString();
 
             actions.quantityForm(i, quantity);
-            actions.dragAndDropElement(methods.getImgCircle(i), methods.dropBasket());
+            actions.dragAndDropElement(methods.getImgCircle(i), methods.dropToBasket());
             expect(methods.productQuantityInBasket(i)).getText().toBe(quantity);
         }
     })
 })
 
-describe('Drag and Drop product', function () {
-    it('whit quantity == 0', function () {
+describe('Drag&Drop product', function () {
+    it('with quantity == 0', function () {
 
         var whichOne = actions.getRandomValue(13);
 
