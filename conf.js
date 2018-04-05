@@ -18,6 +18,7 @@ exports.config = {
 
     specs: ['tests/Test_6.js'],
     specs: ['tests/Test_7.js'],
+    specs: ['tests/Test_8.js'],
 
     jasmineNodeOpts: {
         showColors: true
