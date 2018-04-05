@@ -45,9 +45,11 @@ module.exports = {
         return Math.floor(Math.random() * maximumValueMinusOne);
     },
 
-    let: selectDropdownByName = function (optionName) {
+    selectDropdown: function (optionName, pointerType) {
+        return
+
         if (optionName) {
-            var options = methods.cardForm('task8_form[cardType]')
+            var options = methods.cardForm(pointerType)
                 .then(function (optionName) {
                     options[optionName].click();
                 });
@@ -65,22 +67,4 @@ module.exports = {
     cvvNumber: function (cvvNumber) {
         return methods.cardCvvForm(cvvNumber);
     },
-
-    let: selectDropdownByMonth = function (optionName) {
-        if (optionName) {
-            var options = methods.cardForm('task8_form[cardInfo][month]')
-                .then(function (optionName) {
-                    options[optionName].click();
-                });
-        }
-    },
-
-    let: selectDropdownByYear = function (optionName) {
-        if (optionName) {
-            var options = methods.cardForm('task8_form[cardInfo][year]')
-                .then(function (optionName) {
-                    options[optionName].click();
-                });
-        }
-    }
 }

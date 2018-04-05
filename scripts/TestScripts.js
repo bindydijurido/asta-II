@@ -20,12 +20,12 @@ module.exports = {
     fulfillPaymentForms: function (testPageNr, cardTypeName, clientSurname, cardNumber, cvvNumber, cardMonth, cardYear) {
 
         actions.openTestPage(testPageNr);
-        selectDropdownByName(cardTypeName);
+        actions.selectDropdown(cardTypeName, 'task8_form[cardType]');
         actions.nameSurnameForm(clientSurname);
         actions.cardNumber(cardNumber);
         actions.cvvNumber(cvvNumber);
-        selectDropdownByMonth(cardMonth);
-        selectDropdownByYear(cardYear);
+        actions.selectDropdown(cardMonth, 'task8_form[cardInfo][month]');
+        actions.selectDropdown(cardYear, 'task8_form[cardInfo][year]');
         methods.payButton().click();
     }
 }
