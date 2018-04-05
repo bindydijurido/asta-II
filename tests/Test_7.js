@@ -33,9 +33,9 @@ describe('Random Quantity for Drag&Drop functionality', function () {
 describe('Drag&Drop product', function () {
     it('with quantity == 0', function () {
 
-        var whichOne = actions.getRandomValue(13);
+        var randomValue = actions.getRandomValue(13);
 
-        script.dragAndDropFunctionality("7", whichOne, "0", whichOne);
-        expect(methods.productQuantityInBasket(whichOne).getText().toBe("0"));
+        script.dragAndDropFunctionality("7", randomValue, "0", whichOne);
+        expect(methods.productQuantityInBasket(randomValue).getText().toBe("0"));
     })
 })
