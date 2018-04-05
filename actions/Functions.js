@@ -12,45 +12,42 @@ module.exports = {
     },
 
     provideDataToLoginForm: function (loginData) {
-        return
-        element(by.id('LoginForm__username')).sendKeys(loginData);
+        return methods.loginFormUserName(loginData);
     },
 
     provideDataToPsswdForm: function (psswdData) {
-        return
-        element(by.id('LoginForm__username')).sendKeys(psswdData);
+        return methods.loginFormUserPsswd(psswdData);
     },
 
     downloadFileLink: function () {
-        return
-        browser.findElement(By.xpath('/html/body/div/div/div[2]/div[2]/a')).click();
+        return methods.downloadFileUrl();
     },
 
     clickLogoutUserLink: function (click) {
         return
 
         if (click == true) {
-            browser.findElement(By.xpath('//*[@id="logout"]')).click();
+            methods.logOutBttn().click();
         } else {
             expect(methods.logOutBttn()).getText().toBe('Wyloguj');
         }
     },
 
     dragAndDropElement: function (elem, target) {
-        return browser.actions().dragAndDrop(elem, target).mouseUp().perform();
+        return methods.dragAndDropAction(elem, target);
     },
 
     quantityForm: function (number, productQuantity) {
-        return element(by.className('form-control')[number]).sendKeys(productQuantity);
+        return methods.quantityFormPointer(number, productQuantity);
     },
 
     getRandomValue: function (maximumValueMinusOne) {
         return Math.floor(Math.random() * maximumValueMinusOne);
     },
 
-    var: selectDropdownByName = function (optionName) {
+    let: selectDropdownByName = function (optionName) {
         if (optionName) {
-            var options = element.findElements(by.tagName('task8_form[cardType]'))
+            var options = methods.cardForm('task8_form[cardType]')
                 .then(function (optionName) {
                     options[optionName].click();
                 });
@@ -58,29 +55,29 @@ module.exports = {
     },
 
     nameSurnameForm: function (nameSurname) {
-        return element(by.id('task8_form_name')).sendKeys(nameSurname);
+        return methods.userFormName(nameSurname);
     },
 
     cardNumber: function (cardNumber) {
-        return element(by.id('task8_form_cardNumber')).sendKeys(cardNumber);
+        return methods.cardNumberForm(cardNumber);
     },
 
     cvvNumber: function (cvvNumber) {
-        return element(by.id('task8_form_cardCvv')).sendKeys(cvvNumber);
+        return methods.cardCvvForm(cvvNumber);
     },
 
-    var: selectDropdownByMonth = function (optionName) {
+    let: selectDropdownByMonth = function (optionName) {
         if (optionName) {
-            var options = element.findElements(by.tagName('task8_form[cardInfo][month]'))
+            var options = methods.cardForm('task8_form[cardInfo][month]')
                 .then(function (optionName) {
                     options[optionName].click();
                 });
         }
     },
 
-    var: selectDropdownByYear = function (optionName) {
+    let: selectDropdownByYear = function (optionName) {
         if (optionName) {
-            var options = element.findElements(by.tagName('task8_form[cardInfo][year]'))
+            var options = methods.cardForm('task8_form[cardInfo][year]')
                 .then(function (optionName) {
                     options[optionName].click();
                 });

@@ -1,15 +1,12 @@
 const actions = require('actions/Functions');
 const methods = require('pageObjects/Methods');
+const script = require('scripts/TestScripts')
 
 describe('Login&Psswd', function () {
     it('entered correctly', function () {
 
-        actions.openTestPage("6");
-        actions.provideDataToLoginForm("tester");
-        actions.provideDataToPsswdForm("123-xyz");
-        actions.clickLoginBttn();
+        script.provideFormData("6", "tester", "123-xyz");
         actions.clickLogoutUserLink(false);
-
         expect(methods.logOutBttn()).getText().toBe('Wyloguj');
     })
 })
@@ -18,11 +15,7 @@ describe('Login&Psswd', function () {
 describe('Login&Psswd', function () {
     it('entered wrong data', function () {
 
-        actions.openTestPage("6");
-        actions.provideDataToLoginForm("tester");
-        actions.provideDataToPsswdForm("123");
-        actions.clickLoginBttn();
-
+        script.provideFormData("6", "tester", "123")
         expect(methods.wrongLoginDataAlert()).getText().toBe('Nieprawidłowe dane logowania');
     })
 })
@@ -30,10 +23,7 @@ describe('Login&Psswd', function () {
 describe('Download file', function () {
     it('to default directory', function () {
 
-        actions.openTestPage("6");
-        actions.provideDataToLoginForm("tester");
-        actions.provideDataToPsswdForm("123-xyz");
-        actions.clickLoginBttn();
+        script.provideFormData("6", "tester", "123-xyz")
         actions.downloadFileLink();
     })
 })
@@ -41,12 +31,8 @@ describe('Download file', function () {
 describe('Logout user functionality', function () {
     it('is working fine!', function () {
 
-        actions.openTestPage("6");
-        actions.provideDataToLoginForm("tester");
-        actions.provideDataToPsswdForm("123-xyz");
-        actions.clickLoginBttn();
+        script.provideFormData("6", "tester", "123-xyz")
         actions.clickLogoutUserLink(true);
-
         expect(methods.loginBttn()).getText().toBe('Login');
     })
 })
