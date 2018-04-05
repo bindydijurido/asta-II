@@ -5,6 +5,7 @@ describe('Payment via Bank Visa Card', function () {
     it('is working fine', function () {
 
         actions.openTestPage("8");
+
         selectDropdownByName("vs");
 
         actions.nameSurnameForm("Jan Kowalski");
@@ -14,8 +15,8 @@ describe('Payment via Bank Visa Card', function () {
         selectDropdownByMonth("January");
         selectDropdownByYear("2019");
 
-        actions.payButton().click();
+        methods.payButton().click();
 
-        expect(actions.paymentClarificationAlert()).getText().toBe(' Zamówienie opłacone');
+        expect(methods.paymentClarificationAlert()).getText().toBe(' Zamówienie opłacone');
     })
 })

@@ -22,5 +22,13 @@ module.exports = {
 
     productQuantityInBasket: function (number) {
         return element(by.className('row-in-basket-quantity')[number]);
+    },
+
+    paymentClarificationAlert: function () {
+        return browser.findElement(By.xpath('/html/body/div/div/div[2]/div/div/ul/li'));
+    },
+
+    payButton: function () {
+        return element(by.className('task8_form[save]'));
     }
 }
