@@ -1,4 +1,3 @@
-const actions = require('actions/Functions');
 const methods = require('pageObjects/Methods');
 const script = require('scripts/TestScripts');
 
