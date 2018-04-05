@@ -6,7 +6,7 @@ const script = require('scripts/TestScripts');
 describe('Drag and Drop functionality', function () {
     it('is working fine', function () {
 
-        script.dragAndDropFunctionality("7", 0, "4", 0)
+        script.dragAndDropFunctionality("7", 0, "4", 0);
         expect(methods.productQuantityInBasket(0)).getText().toBe("4");
     })
 })
