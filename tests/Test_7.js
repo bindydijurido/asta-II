@@ -35,7 +35,7 @@ describe('Drag&Drop product without Product Quantity', function () {
 
         var randomValue = actions.getRandomValue(13);
 
-        script.dragAndDropFunctionality("7", randomValue, "0", whichOne);
+        script.dragAndDropFunctionality("7", randomValue, "0", randomValue);
         expect(methods.productQuantityInBasket(randomValue).getText().toBe("0"));
     })
 })
