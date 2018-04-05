@@ -5,7 +5,7 @@ const script = require('scripts/TestScripts')
 describe('Login&Psswd', function () {
     it('entered correctly', function () {
 
-        script.provideFormData("6", "tester", "123-xyz");
+        script.provideFormData("6", "tester", "123-xyz"); // testPageNr, loginData, psswdData
         actions.clickLogoutUserLink(false);
     })
 })

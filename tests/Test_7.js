@@ -6,8 +6,11 @@ const script = require('scripts/TestScripts');
 describe('Drag and Drop functionality', function () {
     it('is working fine', function () {
 
-        script.dragAndDropFunctionality("7", 0, "4", 0);
-        expect(methods.productQuantityInBasket(0)).getText().toBe("4");
+        var productQuantity = "4";
+        var number = 0;
+
+        script.dragAndDropFunctionality("7", number, productQuantity, 0); // testPageNr, number, productQuantity, elementToDrag
+        expect(methods.productQuantityInBasket(number)).getText().toBe(productQuantity);
     })
 })
 
