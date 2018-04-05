@@ -33,7 +33,7 @@ describe('Random Product Quantity for Drag&Drop functionality', function () {
 describe('Drag&Drop product without Product Quantity', function () {
     it('basket has always 0 value', function () {
 
-        for (var i = 0; i = 12; i++) {
+        for (var i = 0; i == 12; i++) {
 
             var randomValue = actions.getRandomValue(13);
 
