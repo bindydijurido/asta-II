@@ -12,7 +12,7 @@ describe('Drag&Drop functionality', function () {
         script.dragAndDropFunctionality("7", value, productQuantity, 0); // testPageNr, value, productQuantity, elementToDrag
         expect(methods.productQuantityInBasket(value)).getText().toBe(productQuantity);
     })
-})
+});
 
 describe('Random Product Quantity for Drag&Drop functionality', function () {
     it('is working fine', function () {
@@ -28,7 +28,7 @@ describe('Random Product Quantity for Drag&Drop functionality', function () {
             expect(methods.productQuantityInBasket(i)).getText().toBe(quantity);
         }
     })
-})
+});
 
 describe('Drag&Drop product without Product Quantity', function () {
     it('basket has always 0 value', function () {
@@ -41,4 +41,4 @@ describe('Drag&Drop product without Product Quantity', function () {
             expect(methods.productQuantityInBasket(randomValue).getText().toBe("0"));
         }
     })
-})
+});

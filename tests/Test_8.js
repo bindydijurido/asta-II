@@ -8,4 +8,4 @@ describe('Payment via Bank Visa Card', function () {
         // testPageNr, cardTypeName, clientSurname, cardNumber, cvvNumber, cardMonth, cardYear
         expect(methods.paymentClarificationAlert()).getText().toBe(' Zamówienie opłacone');
     })
-})
+});
