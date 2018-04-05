@@ -7,7 +7,6 @@ describe('Login&Psswd', function () {
 
         script.provideFormData("6", "tester", "123-xyz");
         actions.clickLogoutUserLink(false);
-        expect(methods.logOutBttn()).getText().toBe('Wyloguj');
     })
 })
 
