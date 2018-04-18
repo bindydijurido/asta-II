@@ -53,12 +53,12 @@ describe('Payment via Diners Club', function () {
     })
 });
 
-describe('Payment via Discover', function () {
-    it('is working goooood', function () {
-
-        functions.openTestPage("8");
-
-        script.fulfillPaymentForms("ds", "Janusz Biznesu", "6011111111111117", "029", "December", "2019");
-        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
-    })
-});
+// describe('Payment via Discover', function () {
+//     it('is working goooood', function () {
+//
+//         functions.openTestPage("8");
+//
+//         script.fulfillPaymentForms("ds", "Janusz Biznesu", "6011111111111117", "029", "December", "2019");
+//         expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+//     })
+// });
