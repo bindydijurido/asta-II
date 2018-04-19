@@ -17,9 +17,8 @@ module.exports = {
         actions.dragAndDropElement(methods.getImgCircle(elementToDrag), methods.dropToBasket());
     },
 
-    fulfillPaymentForms: function (testPageNr, cardTypeName, clientSurname, cardNumber, cvvNumber, cardMonth, cardYear) {
+    fulfillPaymentForms: function (cardTypeName, clientSurname, cardNumber, cvvNumber, cardMonth, cardYear) {
 
-        actions.openTestPage(testPageNr);
         actions.selectDropdown(cardTypeName, 'task8_form[cardType]');
         actions.nameSurnameForm(clientSurname);
         actions.cardNumber(cardNumber);

@@ -62,3 +62,53 @@ describe('Payment via Discover', function () {
         expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
     })
 });
+
+describe('Payment via JBC', function () {
+    it('is working fine', function () {
+
+        functions.openTestPage("8");
+
+        script.fulfillPaymentForms("jb", "Jan Kowalski", "3566002020360505", "512", "March", "2019");
+        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+    })
+});
+
+describe('Payment via Master Card', function () {
+    it('is working fine', function () {
+
+        functions.openTestPage("8");
+
+        script.fulfillPaymentForms("mc", "Agnieszka Nowak", "5105105105105100", "023", "May", "2019");
+        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+    })
+});
+
+describe('Payment via Visa', function () {
+    it('is working fine', function () {
+
+        functions.openTestPage("8");
+
+        script.fulfillPaymentForms("vs", "Hanna Nier", "4012888888881881", "041", "May", "2019");
+        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+    })
+});
+
+describe('Payment via Dankort (PBS)', function () {
+    it('is working fine', function () {
+
+        functions.openTestPage("8");
+
+        script.fulfillPaymentForms("df", "Jan Pikachu", "76009244561", "123", "May", "2019");
+        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+    })
+});
+
+describe('Payment via Switch/Solo (Paymentech)', function () {
+    it('is working fine', function () {
+
+        functions.openTestPage("8");
+
+        script.fulfillPaymentForms('ss', "Hans Laumer", "Switch/Solo (Paymentech)", "523", "April", "2019");
+        expect(methods.paymentClarificationAlert().getText().toBe(' Zamówienie opłacone'));
+    })
+});
